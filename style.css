@@ -1,0 +1,217 @@
+/* imported fonts */
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+/* css reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* root variables */
+:root {
+    font-family: "Poppins";
+    --Green: #d4da47;
+    --LightPurple: #8e9efb;
+    --Orange: #ffab34;
+    --LightBlue: #cae6f6;
+    --DeepBlue: #3957d3;
+}
+
+/* global styles */
+h1 {
+    font-size: 80px;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 40px;
+    font-weight: bold;
+    color: var(--DeepBlue);
+    padding-bottom: 30px;
+}
+
+h3 {
+    font-size: 30px;
+    color: var(--DeepBlue);
+    padding-bottom: 50px;
+}
+
+p {
+    color: var(--DeepBlue);
+    line-height: normal;
+}
+
+/* regular styles */
+header {
+    display: flex;
+    margin: 50px;
+}
+
+nav ul {
+    display: flex;
+    padding: 20px;
+    list-style-type: none;
+    
+}
+
+nav a {
+    text-decoration: none;
+    padding: 30px;
+    color: var(--DeepBlue);
+}
+
+.hero {
+    display: flex;
+    background-color: var(--Green);
+    border-radius: 30px;
+    margin: 50px;
+    position: relative;
+}
+
+.hero h1 {
+    color: white;
+    padding-top: 200px;
+}
+
+.hero img {
+    padding-left: 80px;
+    width: 40%;
+}
+
+.story {
+    display: flex;
+    margin: 50px;
+    margin-top: 70px;
+}
+
+.products button {
+    background-color: var(--DeepBlue);
+    color: white;
+    padding: 10px 40px 10px 40px;
+    border-radius: 30px;
+}
+
+.shop_images {
+    display: grid;
+    grid-template-columns: 300px 300px 300px;
+    padding: 50px;
+}
+
+.game {
+    background-color: var(--LightBlue);
+    padding-left: 70px;
+    padding-right: 70px;
+    padding-top: 60px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+
+}
+
+.game label {
+    color: var(--DeepBlue);
+}
+
+.game input {
+    border: solid var(--DeepBlue);
+    width: 10%;
+    padding: 10px;
+    border-radius: 30px;
+    background-color: var(--LightBlue);
+}
+
+.game button {
+    background-color: var(--DeepBlue);
+    color: white;
+    font-family: "Poppins";
+    border: none;
+    padding: 10px 40px 10px 40px;
+    border-radius: 30px;
+}
+
+.contact {
+    background-color: var(--LightBlue);
+    color: var(--DeepBlue);
+    padding-right: 100px;
+    padding-left: 50px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.contact button{
+    background-color: var(--DeepBlue);
+    border-radius: 30px;
+    color: white;
+    width: 100%;
+    padding: 10px;
+    font-family: "Poppins";
+    font-size: 17px;
+    border: none;
+    margin: 20px;
+}
+
+form input{
+    border: solid var(--DeepBlue);
+    border-radius: 30px;
+    background-color: var(--LightBlue);
+    width: 100%;
+    padding: 10px;
+    margin: 5px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 35px;
+}
+
+footer {
+    background-color: var(--LightBlue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+
+footer img {
+    width: 20%
+}
+
+
