@@ -11,11 +11,11 @@
     <img src="PeakFuel_Logo.png" alt="PeakFuel logo">
     <nav>
         <ul>
-            <li><a href="about">About Us</a></li>
-            <li><a href="products">Products</a></li>
-            <li><a href="shop">Shop</a></li>
-            <li><a href="game">Game</a></li>
-            <li><a href="contactUs">Contact Us</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#shop">Shop</a></li>
+            <li><a href="#game">Game</a></li>
+            <li><a href="#contact">Contact Us</a></li>
         </ul>
     </nav>
 </header>
@@ -27,7 +27,7 @@
     </section>
 
     <!--our story section-->
-    <section class="story">
+    <section id="about">
         <div>
         <h2>Our Story</h2>
         <p>PeakFuel was inspired by our founder, Lisa Monroe. Lisa had a difficult time working out because she always
@@ -42,29 +42,39 @@
     </section>
 
     <!--product section-->
-    <section class="products">
-        <h2>More Products</h2>
-        <img src="MintyFresh.png" alt="Minty Fresh flavor">
-        <h3>Name of flavor</h3>
-        <p>Description of flavor</p>
+    <section id="products">
+            <h2>More Products</h2>
+        <div class="container_products">
+            <div>
+                <img src="MintyFresh_wBackground.jpg" alt="Minty Fresh flavor">
+            </div>
+
+            <div>
+                <h3>Minty Fresh</h3>
+                <p>Description of flavor</p>
+            </div>
+        </div>
+        
+        <div class="products_buttons">
         <button>Lemmon Vibe</button>
         <button>Berry Blast</button>
         <button>Minty Fresh</button>
+        </div>
     </section>
 
     <!--shop/product calculator-->
-    <section>
+    <section id="shop">
         <h2>Shop</h2>
         <div class="shop_images">
-            <img src="BerryBlast.png" alt="Berry Blast flavor">
-            <img src="MintyFresh.png" alt="Minty Fresh flavor">
-            <img src="LemonVibe.png" alt="Lemon Vibe flavor">
+            <img src="BerryBlast_wBackground.jpg" alt="Berry Blast flavor">
+            <img src="MintyFresh_wBackground.jpg" alt="Minty Fresh flavor">
+            <img src="LemonVibe_wBackground.jpg" alt="Lemon Vibe flavor">
         </div>
         
     </section>
 
     <!--game section-->
-    <section class="game">
+    <section id="game">
         <div>
             <h2>Play a game to win!</h2>
             <h3>Guess the number correctly for a chance to win a free product.</h3>
@@ -76,7 +86,7 @@
     </section>
 
     <!-- contact section -->
-    <section class="contact">
+    <section id="contact">
         <h2>Contact Us</h2>
 
         <form>

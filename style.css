@@ -115,26 +115,61 @@ nav a {
     width: 40%;
 }
 
-.story {
+#about {
     display: flex;
     margin: 50px;
     margin-top: 70px;
 }
 
-.products button {
+#products {
+    padding-left: 70px;
+    padding-right: 70px;
+}
+
+#products img {
+    filter: drop-shadow(5px 5px 15px lightgray);
+    border-radius: 30px;
+    padding-bottom: 30px;
+}
+
+.container_products {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#products button {
     background-color: var(--DeepBlue);
     color: white;
-    padding: 10px 40px 10px 40px;
+    font-family: "Poppins";
+    padding: 10px 60px 10px 60px;
     border-radius: 30px;
+    border: none;
+}
+
+.products_buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+    justify-content: center;
+}
+
+#shop {
+    padding: 70px;
 }
 
 .shop_images {
     display: grid;
-    grid-template-columns: 300px 300px 300px;
-    padding: 50px;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
 }
 
-.game {
+#shop img {
+    width: 70%;
+    filter: drop-shadow(5px 5px 15px lightgray);
+    border-radius: 30px;
+}
+
+#game {
     background-color: var(--LightBlue);
     padding-left: 70px;
     padding-right: 70px;
@@ -145,11 +180,11 @@ nav a {
 
 }
 
-.game label {
+#game label {
     color: var(--DeepBlue);
 }
 
-.game input {
+#game input {
     border: solid var(--DeepBlue);
     width: 10%;
     padding: 10px;
@@ -157,7 +192,7 @@ nav a {
     background-color: var(--LightBlue);
 }
 
-.game button {
+#game button {
     background-color: var(--DeepBlue);
     color: white;
     font-family: "Poppins";
@@ -166,16 +201,15 @@ nav a {
     border-radius: 30px;
 }
 
-.contact {
+#contact {
     background-color: var(--LightBlue);
     color: var(--DeepBlue);
     padding-right: 100px;
     padding-left: 50px;
-    padding-top: 50px;
     padding-bottom: 50px;
 }
 
-.contact button{
+#contact button{
     background-color: var(--DeepBlue);
     border-radius: 30px;
     color: white;
@@ -203,11 +237,12 @@ form input{
 }
 
 footer {
-    background-color: var(--LightBlue);
+    background-color: var(--LightPurple);
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 30px;
+    font-weight:500;
 }
 
 footer img {
