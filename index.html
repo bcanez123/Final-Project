@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PeakFuel</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="javascript" href="index.js">
 </head>
 <body>
 <header>
@@ -77,10 +78,10 @@
     <section id="game">
         <div>
             <h2>Play a game to win!</h2>
-            <h3>Guess the number correctly for a chance to win a free product.</h3>
-            <label>Enter a number between 1 and ten:</label>
-            <input type="text">
-            <button>Take a guess</button>
+            <h3>Press the button below to generate a random number. If the number is a 5, you win!</h3>
+            <span id="random1"></span>
+            <p id="gameMsg"></p>
+            <button id="guessingGame">Play</button>
         </div>
         <img src="TrophyIcon.png" alt="Trophy">
     </section>
