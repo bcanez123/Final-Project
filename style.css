@@ -209,30 +209,40 @@ nav a {
     padding-bottom: 50px;
 }
 
+#contact textarea {
+    background-color: var(--LightBlue);
+    border: solid var(--DeepBlue);
+    border-radius: 20px;
+    padding: 10px;
+    width: 50%;
+    display: block;
+}
+
 #contact button{
     background-color: var(--DeepBlue);
     border-radius: 30px;
     color: white;
-    width: 100%;
     padding: 10px;
     font-family: "Poppins";
     font-size: 17px;
     border: none;
-    margin: 20px;
+    margin: 10px;
+    display: block;
+    width: 50%;
 }
 
 form input{
     border: solid var(--DeepBlue);
     border-radius: 30px;
     background-color: var(--LightBlue);
-    width: 100%;
+    display: block;
     padding: 10px;
-    margin: 5px;
+    width: 50%;
 }
 
 .container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 35px;
 }
 

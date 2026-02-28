@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PeakFuel</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="javascript" href="index.js">
+    <script src="index.js" defer></script>
 </head>
 <body>
 <header>
@@ -52,7 +52,7 @@
 
             <div>
                 <h3>Minty Fresh</h3>
-                <p>Description of flavor</p>
+                <p>Minty Fresh Description of flavor</p>
             </div>
         </div>
         
@@ -77,11 +77,13 @@
     <!--game section-->
     <section id="game">
         <div>
-            <h2>Play a game to win!</h2>
-            <h3>Press the button below to generate a random number. If the number is a 5, you win!</h3>
+            <h2>Play to win!</h2>
+            <h3>Guess the number correctly to win a free product.</h3>
+            <label id="gameLabel">Enter a number between 1 and 10:</label>
+            <input type="text" name="text">
             <span id="random1"></span>
             <p id="gameMsg"></p>
-            <button id="guessingGame">Play</button>
+            <button id="guessingGame">Take a Guess</button>
         </div>
         <img src="TrophyIcon.png" alt="Trophy">
     </section>
@@ -90,32 +92,42 @@
     <section id="contact">
         <h2>Contact Us</h2>
 
-        <form>
+        <form id="valOnSubmit">
             <div class="container">
                 <div>
                     <label id="fName">Full Name</label>
                     <input type="text" name="fName" required>
+                    <span class="message">Please enter your full name</span>
                 </div>
 
                 <div>
                     <label id="email">Email</label>
                     <input type="text" name="emailAddress" required>
+                    <span class="message">Please enter your email address</span>
                 </div>
 
                 <div>
                     <label id="phoneNumber">Phone Number</label>
                     <input type="text" name="phoneNumber" required>
+                    <span class="message">Please enter your phone number</span>
                 </div>
-
+            
                 <div>
                     <label id="comments">Comments</label>
                     <textarea id="text" name="text" rows="4" cols="50"></textarea>
                 </div>
-            </div>
 
-            <button type="submit">Submit</button>
+                <div>
+                    <input type="submit" name="submit" id="submit">Submit</input>
+                </div>
+            </div>
         
         </form>
+        <section id="success">
+            <h4>Thank you!</h4>
+            <p>You have successfully submitted the form!</p>
+            <p id="formSub"></p>
+        </section>
     </section>
 
 </main>
