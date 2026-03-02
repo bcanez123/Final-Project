@@ -15,6 +15,21 @@ function berry(){
     mintyImg.src = "BerryBlast_wBackground.jpg";
 }
 
+
+// shop calculator section
+function calculate(){
+    let tax = 0.5;
+    let shipping = 5;
+    let berry = document.getElementById("berry");
+    let minty = document.getElementById("minty");
+    let lemmon = document.getElementById("lemmon");
+    let outputString = "";
+
+    outputString += `<span>Total: ${tax} + ${shipping}</span>`
+
+}
+
+
 //game section
 //random number function
 function getRandomNumber(min, max) {
@@ -151,6 +166,8 @@ function valOnSubmit(e){
 document.getElementyById("nightMode").addEventListener("click", insertRule);
 
 document.getElementById("berryBlast").addEventListener("click", berry);
+
+document.querySelector("#shop button").addEventListener("click", calculate);
 
 document.getElementById("guessingGame").addEventListener("click", guessNumber);
 
