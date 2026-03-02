@@ -19,6 +19,7 @@
             <li><a href="#contact">Contact Us</a></li>
         </ul>
     </nav>
+    <img id="nightMode "src="mode_night_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg" alt="night mode">
 </header>
 <main>
     <!--hero section-->
@@ -57,9 +58,9 @@
         </div>
         
         <div class="products_buttons">
-        <button>Lemmon Vibe</button>
-        <button>Berry Blast</button>
-        <button>Minty Fresh</button>
+        <button id="lemmonVibe">Lemmon Vibe</button>
+        <button id="berryBlast">Berry Blast</button>
+        <button id="mintyFresh">Minty Fresh</button>
         </div>
     </section>
 
@@ -67,9 +68,39 @@
     <section id="shop">
         <h2>Shop</h2>
         <div class="shop_images">
-            <img src="BerryBlast_wBackground.jpg" alt="Berry Blast flavor">
-            <img src="MintyFresh_wBackground.jpg" alt="Minty Fresh flavor">
-            <img src="LemonVibe_wBackground.jpg" alt="Lemon Vibe flavor">
+            <div>
+                <img class="shop" src="BerryBlast_wBackground.jpg" alt="Berry Blast flavor">
+                <h3>Berry Blast</h3>
+                <p>$15.00</p>
+                <label id="berryLabel">Add to cart</label>
+                <input type="checkbox" name="berry" id="berry">
+            </div>
+
+            <div>
+                <img class="shop" src="MintyFresh_wBackground.jpg" alt="Minty Fresh flavor">
+                <h3>Minty Fresh</h3>
+                <p>$15.00</p>
+                <label id="mintyLabel">Add to cart</label>
+                <input type="checkbox" name="minty" id="minty">
+            </div>
+
+            <div>
+                <img class="shop" src="LemonVibe_wBackground.jpg" alt="Lemon Vibe flavor">
+                <h3>Lemmon Vibe</h3>
+                <p>$15.00</p>
+                <label id="lemmonLabel">Add to cart</label>
+                <input type="checkbox" name="lemmon" id="lemmon">
+            </div>
+
+            <div>
+                <img src="shopping_cart_24dp_3957D3_FILL0_wght400_GRAD0_opsz24.svg" alt="shopping cart">
+                <h3>Your cart</h3>
+                <p>Sub-Total: <span>$0.00</span></p>
+                <p>Tax Rate: <span> 8.5% tax</span></p>
+                <p>Shipping: <span>$5.00</span></p>
+                <p>Cart Total: <span>$0.00</span></p>
+                <button>Check Out</button>
+            </div>
         </div>
         
     </section>
@@ -95,21 +126,31 @@
         <form id="valOnSubmit">
             <div class="container">
                 <div>
-                    <label id="fName">Full Name</label>
+                    <label id="fName">Full Name<span class="required">*</span></label>
                     <input type="text" name="fName" required>
                     <span class="message">Please enter your full name</span>
                 </div>
 
                 <div>
-                    <label id="email">Email</label>
+                    <label id="email">Email<span class="required">*</span></label>
                     <input type="text" name="emailAddress" required>
                     <span class="message">Please enter your email address</span>
                 </div>
 
                 <div>
-                    <label id="phoneNumber">Phone Number</label>
+                    <label id="phoneNumber">Phone Number<span class="required">*</span></label>
                     <input type="text" name="phoneNumber" required>
                     <span class="message">Please enter your phone number</span>
+                </div>
+
+                <div>
+                    <p>Please select how you prefer to be contacted.</p>
+                    <label id="prefPhone" type="radio">Phone</label>
+                    <input type="radio" name="phone">
+
+                    <label id="prefEmail" type="radio">Email</label>
+                    <input type="radio" name="prefEmail">
+                    <span id="prefer"></span>
                 </div>
             
                 <div>
@@ -123,10 +164,10 @@
             </div>
         
         </form>
-        <section id="success">
-            <p>Thank you! You have successfully submitted the form!</p>
-            <p id="formSub"></p>
-        </section>
+            <div id="success" class="hide">
+                <p>Thank you! You have successfully submitted the form!</p>
+                <p id="formSub"></p>
+             </div>
     </section>
 
 </main>

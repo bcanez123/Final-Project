@@ -1,6 +1,20 @@
 //strict
 "use strict"
 
+//night mode
+function insertRule(){
+    let stylesheet = document.styleSheets[0];
+    stylesheet.insertRule("nav {backgroundColor: blue;}");
+
+    stylesheet.insertRule("ul {color: white; }");
+}
+
+//product section
+function berry(){
+    let mintyImg = document.querySelector("#products img");
+    mintyImg.src = "BerryBlast_wBackground.jpg";
+}
+
 //game section
 //random number function
 function getRandomNumber(min, max) {
@@ -23,6 +37,27 @@ function guessNumber(){
         gameMessage.innerHTML = "Congrats! You win!";
     }else{
         gameMessage.innerHTML = "You lose. Try again.";
+    }
+}
+
+
+//radio button section
+
+// variables for the radio buttons(phone or email)
+let prefPhone = document.getElementById("prefPhone");
+let prefEmail = document.getElementById("prefEmail");
+
+// span where we will show what the user prefered phone or email
+let preferSpan = document.getElementById("prefer");
+
+//function for how the radios are displayed
+function displayPrefer(){
+    if(prefPhone.checked) {
+        preferSpan.textContent = "You prefer to be called."
+    }
+
+    if(prefEmail.checked) {
+        preferSpan.textContent = "You prefer to be emailed."
     }
 }
 
@@ -53,9 +88,9 @@ function valOnSubmit(e){
     document.querySelector("#success").classList.add("hide");
 
     // reg expressions to validate the email and phone number
-    let fNameRegex = /([a-z])/;
+    let fNameRegex = /([a-z])/i;
     let emailRegex = /\w+@/ ;
-    let phoneRegex = /({0-9})/;
+    let phoneNumberRegex = /[(][0-9]{3}[)][0-9]{3}[-][0-9]{4}/;
 
     //validate full name, should not be blank and should follow the fName regex
     if(form.fName.value === "" || !(fNameRegex.toLocaleString(form.fName.value))){
@@ -81,6 +116,18 @@ function valOnSubmit(e){
         isValid = false;
     }
 
+    //validate phone number and should follow regex
+    if(form.phoneNumber.value === "" || (!phoneNumberRegex.toLocaleString(form.phoneNumber.value))){
+        // on error, add the errorInput class to the input
+        form.phoneNumber.classList.add("errorInput");
+
+        //on error, add the error lass to the span with this input that has the message class
+        errorSpans[1].classList.add("error");
+
+        //set the form validation tracking variable to false
+        isValid = false;
+    }
+
     // if the form is valid, submit it and reset
     if(isValid){
 
@@ -91,7 +138,7 @@ function valOnSubmit(e){
         // display the users data (show on screen)
         document.getElementById("formSub").innerHTML =
         `Full Name: ${form.fName.value}
-        <br>Email: ${form.email.value}`;
+        <br>Email: ${form.email.value} <br>Phone: ${form.phoneNumber.value}`;
 
         // reset the form
         form.reset();
@@ -101,6 +148,17 @@ function valOnSubmit(e){
 }
 
 //event listeners
+document.getElementyById("nightMode").addEventListener("click", insertRule);
+
+document.getElementById("berryBlast").addEventListener("click", berry);
+
 document.getElementById("guessingGame").addEventListener("click", guessNumber);
 
 document.getElementById("contactValidate").addEventListener("submit",valOnSubmit);
+
+//event listeners for radio buttons
+
+let preferRadios = document.querySelectorAll("input[type=\"radio\"]");
+for (let radio of preferRadios){
+	radio.addEventListener("change", displayPrefer);
+}

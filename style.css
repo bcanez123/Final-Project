@@ -68,9 +68,9 @@ h2 {
 }
 
 h3 {
-    font-size: 30px;
+    font-size: 25px;
     color: var(--DeepBlue);
-    padding-bottom: 50px;
+    padding-bottom: 20px;
 }
 
 p {
@@ -95,6 +95,10 @@ nav a {
     text-decoration: none;
     padding: 30px;
     color: var(--DeepBlue);
+}
+
+#lightDark{
+    width: 5%;
 }
 
 #hero {
@@ -137,6 +141,8 @@ nav a {
     grid-template-columns: 1fr 1fr;
 }
 
+
+
 #products button {
     background-color: var(--DeepBlue);
     color: white;
@@ -159,14 +165,27 @@ nav a {
 
 .shop_images {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 10px;
 }
 
 #shop img {
-    width: 70%;
     filter: drop-shadow(5px 5px 15px lightgray);
     border-radius: 30px;
+}
+
+#shop button {
+    background-color: var(--DeepBlue);
+    color: white;
+    font-family: "Poppins";
+    border: none;
+    padding: 10px 40px 10px 40px;
+    border-radius: 30px;
+
+}
+
+.shop{
+    width: 80%;
 }
 
 #game {
@@ -185,7 +204,7 @@ nav a {
 }
 
 #game input {
-    border: solid var(--DeepBlue);
+    border: solid 1.5px var(--DeepBlue);
     width: 10%;
     padding: 10px;
     border-radius: 30px;
@@ -211,12 +230,14 @@ nav a {
 
 #contact textarea {
     background-color: var(--LightBlue);
-    border: solid var(--DeepBlue);
+    border: solid 1.5px var(--DeepBlue);
     border-radius: 20px;
     padding: 10px;
     width: 50%;
     display: block;
 }
+
+
 
 #contact button{
     background-color: var(--DeepBlue);
@@ -232,7 +253,7 @@ nav a {
 }
 
 form input{
-    border: solid var(--DeepBlue);
+    border: solid 1.5px var(--DeepBlue);
     border-radius: 30px;
     background-color: var(--LightBlue);
     display: block;
