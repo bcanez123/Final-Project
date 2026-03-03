@@ -80,10 +80,6 @@ p {
 }
 
 /* regular styles */
-.dark{
-    background-color: var(--DeepBlue);
-    color: white;
-}
 
 header {
     display: flex;
@@ -130,6 +126,7 @@ nav a {
 #products {
     padding-left: 70px;
     padding-right: 70px;
+    padding-bottom: 70px;
 }
 
 #products img {
@@ -158,34 +155,6 @@ nav a {
     grid-template-columns: 1fr 1fr 1fr;
     gap: 30px;
     justify-content: center;
-}
-
-#shop {
-    padding: 70px;
-}
-
-.shop_images {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 10px;
-}
-
-#shop img {
-    border-radius: 30px;
-}
-
-#shop button {
-    background-color: var(--DeepBlue);
-    color: white;
-    font-family: "Poppins";
-    border: none;
-    padding: 10px 40px 10px 40px;
-    border-radius: 30px;
-
-}
-
-.shop{
-    width: 80%;
 }
 
 #game {
