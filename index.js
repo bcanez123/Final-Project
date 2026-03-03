@@ -2,11 +2,8 @@
 "use strict"
 
 //night mode
-function insertRule(){
-    let stylesheet = document.styleSheets[0];
-    stylesheet.insertRule("nav {backgroundColor: blue;}");
-
-    stylesheet.insertRule("ul {color: white; }");
+function darkMode(){
+    document.classList.toggle("dark");
 }
 
 //product section
@@ -163,7 +160,7 @@ function valOnSubmit(e){
 }
 
 //event listeners
-document.getElementyById("nightMode").addEventListener("click", insertRule);
+document.getElementById("nightMode").addEventListener("click", darkMode);
 
 document.getElementById("berryBlast").addEventListener("click", berry);
 
