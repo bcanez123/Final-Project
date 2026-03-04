@@ -81,90 +81,88 @@ function displayPrefer(){
 }
 
 //contact section
-function valOnSubmit(e){
-    //prevent default form submission
+function validateOnSubmit(e){
+    // prevent default form submission
     e.preventDefault();
-    let form = document.querySelector("#valOnSubmit");
-
-    //all error spans for errors to be read
-    let errorSpans = document.querySelectorAll("#valOnSubmit.message");
-
-    //boolean (true/false) variable to track if the form is valid
+    
+    // access the form itself and save in a variable
+    let myForm = document.querySelector("#valOnSubmit");
+    
+    // access all of the error spans to be used as error message holders
+    let errorSpans = document.querySelectorAll("#valOnSubmit .message");
+    
+    // boolean variable used to track form validity
     let isValid = true;
-
-    // reset display of the error inputs before validating
-    form.fName.classList.remove("errorInput");
-    form.email.classList.remove("errorInput");
-    form.phoneNumber.classList.remove("errorInput");
-
-    //reset the display of the error message spans
+    
+     // reset display of the error inputs before validating
+    myForm.fName.classList.remove("errorInput");
+    myForm.emailAddress.classList.remove("errorInput");
+    myForm.phoneNumber.classList.remove("errorInput");
+    
+    // reset the display of the error message spans
     errorSpans.forEach(function(span){
-        span.classList.remove("error");
+      span.classList.remove("error");
     });
-
-    // hide success area on page
+    
+    // hide the success area on the page - this is what shows the user what they submitted in the form when submission is successful
     document.querySelector("#success").classList.remove("show");
     document.querySelector("#success").classList.add("hide");
-
-    // reg expressions to validate the email and phone number
-    let fNameRegex = /([a-z])/i;
-    let emailRegex = /\w+@/ ;
-    let phoneNumberRegex = /[(][0-9]{3}[)][0-9]{3}[-][0-9]{4}/;
-
-    //validate full name, should not be blank and should follow the fName regex
-    if(form.fName.value === "" || !(fNameRegex.toLocaleString(form.fName.value))){
-        //on error, add the error input class
-        form.fName.classList.add("errorInput");
-
-        //on error, add error class to the span with the input that has the message class
-        errorSpans[0].classList.add("error");
-
-        //set the form validation tracking variable to false
-        isValid = false;
+    
+    // regular expressions to validate the name, email and phone number
+      let fNameRegex = /([a-z])/i;
+      let emailRegex = /\w+@/ ;
+      let phoneNumberRegex = /[(][0-9]{3}[)][0-9]{3}[-][0-9]{4}/;
+    
+    // validate full name, it should not be blank and should match the fName regex
+    if(myForm.fName.value === "" || !(fNameRegex.test(myForm.fName.value))){
+    
+      // on error, add the errorInput class to the input itself
+      myForm.fName.classList.add("errorInput");
+      
+      // on error, add the error class to the span associated with this input that has the message class
+      errorSpans[0].classList.add("error");
+      
+      // set the form validation tracking variable to false
+      isValid = false;
     }
-
-    //validate email, should not be blank and should match regex for email
-    if(form.email.value === "" || !(emailRegex.test(form.email.value))){
-        // on error, add the errorInput class to the input itself
-        form.email.classList.add("errorInput");
-
-        // on error, add the error class to the span with this input that has the message class
-        errorSpans[1].classList.add("error");
-
-        //set the form validation tracking variable to false
-        isValid = false;
+    // validate email, it should not be blank and should match the email regex
+    if(myForm.emailAddress.value === "" || !(emailRegex.test(myForm.emailAddress.value))){
+      
+      // on error, add the errorInput class to the input itself
+      myForm.emailAddress.classList.add("errorInput");
+      // on error, add the error class to the span associated with this input that has the message class
+      errorSpans[1].classList.add("error");
+          
+      // set the form validation tracking variable to false
+      isValid = false;
     }
-
-    //validate phone number and should follow regex
-    if(form.phoneNumber.value === "" || (!phoneNumberRegex.toLocaleString(form.phoneNumber.value))){
-        // on error, add the errorInput class to the input
-        form.phoneNumber.classList.add("errorInput");
-
-        //on error, add the error lass to the span with this input that has the message class
-        errorSpans[1].classList.add("error");
-
-        //set the form validation tracking variable to false
-        isValid = false;
+    // validate phone number, it should not be blank
+    if(myForm.phoneNumber.value === ""){
+      // on error, add the errorInput class to the input itself
+      myForm.phoneNumber.classList.add("errorInput");
+      
+      // on error, add the error class to the span associated with this input that has the message class
+      errorSpans[2].classList.add("error");
+      
+      // set the form validation tracking variable to false
+      isValid = false;
     }
-
+    
     // if the form is valid, submit it and reset
     if(isValid){
-
-        //display the 'success' section to the user
-        document.querySelector("#success").classList.remove("hide");
-        document.querySelector("#success").classList.add("show");
-
-        // display the users data (show on screen)
-        document.getElementById("formSub").innerHTML =
-        `Full Name: ${form.fName.value}
-        <br>Email: ${form.email.value} <br>Phone: ${form.phoneNumber.value}`;
-
-        // reset the form
-        form.reset();
-
+      
+      //display the 'success' section to the user
+           document.querySelector("#success").classList.remove("hide");
+      
+  document.querySelector("#success").classList.add("show");
+      
+      // display the user's input data (to show what they are sending to the server)
+      document.getElementById("formSub").innerHTML = `<strong>Full Name: </strong>${myForm.fName.value}<br><strong>Email: </strong>${myForm.emailAddress.value}<br><strong>Phone number: </strong>${myForm.phoneNumber.value}<br><strong>Comment: </stong>${myForm.text.value}`;
+      
+      // reset the form
+          myForm.reset();
     }
-
-}
+  }
 
 //event listeners
 document.getElementById("nightMode").addEventListener("click",darkMode);
@@ -177,7 +175,7 @@ document.getElementById("lemmonVibe").addEventListener("click", lemmon);
 
 document.getElementById("guessingGame").addEventListener("click", guessNumber);
 
-document.getElementById("contactValidate").addEventListener("submit",valOnSubmit);
+document.getElementById("submit").addEventListener("click", validateOnSubmit);
 
 //event listeners for radio buttons
 

@@ -74,25 +74,24 @@
     <!-- contact section -->
     <section id="contact">
         <h2>Contact Us</h2>
-
         <form id="valOnSubmit">
             <div class="container">
                 <div>
                     <label id="fName">Full Name<span class="required">*</span></label>
-                    <input type="text" name="fName" required>
-                    <span class="message">Please enter your full name</span>
+                    <input type="text" name="fName" placeholder="John Doe" required>
+                    <span class="message">Please enter your full name</span><span class="errorInput"></span>
                 </div>
 
                 <div>
                     <label id="email">Email<span class="required">*</span></label>
-                    <input type="text" name="emailAddress" required>
-                    <span class="message">Please enter your email address</span>
+                    <input type="text" name="emailAddress" placeholder="example@email.com" required>
+                    <span class="message">Please enter your email address</span><span class="errorInput"></span>
                 </div>
 
                 <div>
                     <label id="phoneNumber">Phone Number<span class="required">*</span></label>
-                    <input type="text" name="phoneNumber" required>
-                    <span class="message">Please enter your phone number</span>
+                    <input type="text" name="phoneNumber" placeholder="(000)000-0000" required>
+                    <span class="message">Please enter your phone number</span><span class="errorInput"></span>
                 </div>
 
                 <div>
@@ -111,7 +110,7 @@
                 </div>
 
                 <div>
-                    <input type="submit" name="submit" id="submit">
+                  <button type="submit" name="submit" id="submit">Submit</button>
                 </div>
             </div>
         
@@ -122,11 +121,9 @@
              </div>
     </section>
 
+
 </main>
-<footer>
-    <img src="PeakFuel_WhiteLogo.png" alt="Peak Fuel Logo">
-    <p>Powered by PeakFuel 2026</p>
-</footer>
+<footer>Powered by &#169;PeakFuel 2026</footer>
 
 </body>
 </html>
