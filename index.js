@@ -8,8 +8,18 @@ function darkMode(){
 
 //product section
 function berry(){
+    let berryImg = document.querySelector("#products img");
+    berryImg.src = "BerryBlast_wBackground.jpg";
+}
+
+function minty(){
     let mintyImg = document.querySelector("#products img");
-    mintyImg.src = "BerryBlast_wBackground.jpg";
+    mintyImg.src = "MintyFresh_wBackground.jpg";
+}
+
+function lemmon(){
+    let lemmonImg = document.querySelector("#products img");
+    lemmonImg.src = "LemonVibe_wBackground.jpg";
 }
 
 
@@ -150,7 +160,9 @@ document.getElementById("nightMode").addEventListener("click", darkMode);
 
 document.getElementById("berryBlast").addEventListener("click", berry);
 
-document.querySelector("#shop button").addEventListener("click", calculate);
+document.getElementById("mintyFresh").addEventListener("click", minty);
+
+document.getElementById("lemmonVibe").addEventListener("click", lemmon);
 
 document.getElementById("guessingGame").addEventListener("click", guessNumber);
 
