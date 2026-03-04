@@ -2,9 +2,10 @@
 "use strict"
 
 //night mode
+//dark mode
 function darkMode(){
-    document.classList.toggle("dark");
-}
+    document.body.classList.toggle("dark");
+  }
 
 //product section
 function berry(){
@@ -166,7 +167,7 @@ function valOnSubmit(e){
 }
 
 //event listeners
-document.getElementById("nightMode").addEventListener("click", darkMode);
+document.getElementById("nightMode").addEventListener("click",darkMode);
 
 document.getElementById("berryBlast").addEventListener("click", berry);
 

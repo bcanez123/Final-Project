@@ -82,6 +82,10 @@ p {
 }
 
 /* regular styles */
+.dark {
+    background-color: var(--LightPurple);
+    color: white;
+  }
 
 header {
     display: flex;
