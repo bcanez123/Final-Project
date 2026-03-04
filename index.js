@@ -13,20 +13,6 @@ function berry(){
 }
 
 
-// shop calculator section
-function calculate(){
-    let tax = 0.5;
-    let shipping = 5;
-    let berry = document.getElementById("berry");
-    let minty = document.getElementById("minty");
-    let lemmon = document.getElementById("lemmon");
-    let outputString = "";
-
-    outputString += `<span>Total: ${tax} + ${shipping}</span>`
-
-}
-
-
 //game section
 //random number function
 function getRandomNumber(min, max) {
