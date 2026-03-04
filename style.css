@@ -149,6 +149,8 @@ nav a {
     font-family: "Poppins";
     padding: 10px 60px 10px 60px;
     border-radius: 30px;
+    font-weight: medium;
+    font-size: 1em;
     border: none;
 }
 
@@ -189,6 +191,7 @@ nav a {
     border: none;
     padding: 10px 40px 10px 40px;
     border-radius: 30px;
+    font-size: 1em;
 }
 
 #contact {

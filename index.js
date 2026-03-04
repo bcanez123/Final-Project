@@ -10,16 +10,26 @@ function darkMode(){
 function berry(){
     let berryImg = document.querySelector("#products img");
     berryImg.src = "BerryBlast_wBackground.jpg";
+
+    document.querySelector("#products p").textContent = "For all the berry lovers, we have a flavor just for you. Berry Blast Peak Fuel is a nice mixture of tangy and sweet. It makes for a delicious drink and is perfect for your workout. It is rich in essential nutrients and minerals, including sodium, potassium, chloride, magnesium, and phosphate. These powerhouses help keep your blood pressure steady and your muscles cramp-free. Enjoy a drink that is as delicious as it is nourishing. ";
+    document.querySelector("#products h3").textContent = "Berry Blast";
 }
 
 function minty(){
     let mintyImg = document.querySelector("#products img");
     mintyImg.src = "MintyFresh_wBackground.jpg";
+
+    document.querySelector("#products p").textContent = "Looking for a cool, minty twist? Meet Minty Fresh, the latest Peak Fuel flavor designed to keep you feeling calm and refreshed. Whether you are tackling yard work under the sun or lifting weights at the gym, this invigorating drink delivers the minerals and nutrients your body craves. Packed with sodium, potassium, chloride, magnesium, and phosphate, it helps maintain steady blood pressure and prevents muscle cramps. Enjoy a drink that is as revitalizing as it is delicious.";
+  
+    document.querySelector("#products h3").textContent = "Minty Fresh";
 }
 
 function lemmon(){
     let lemmonImg = document.querySelector("#products img");
     lemmonImg.src = "LemonVibe_wBackground.jpg";
+
+    document.querySelector("#products p").textContent = "Energize every workout with our refreshing Lemmon Vibe Peak Fuel drink. From seasoned athletes to boxing enthusiasts, everyone needs electrolytes to perform at their best. Savor the bold, tangy-sweet taste of Lemon Vible, bursting with essential nutrients and minerals like sodium, potassium, chloride, magnesium, and phosphate. These powerhouses help keep your blood pressure steady and your muscles cramp-free. Enjoy a drink that is as delicious as it is nourishing.";
+    document.querySelector("#products h3").textContent = "Lemmon Vibe";
 }
 
 
