@@ -190,13 +190,14 @@ nav a {
 }
 
 #game {
-    background-color: var(--LightBlue);
+    background-color: var(--LightPurple);
     padding-left: 70px;
     padding-right: 70px;
     padding-top: 60px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 30px;
+    border-radius: 30px;
 
 }
 
@@ -223,11 +224,14 @@ nav a {
 }
 
 #contact {
-    background-color: var(--LightBlue);
     color: var(--DeepBlue);
+    background-color: var(--LightPurple);
     padding-right: 100px;
     padding-left: 50px;
     padding-bottom: 50px;
+    padding-top: 50px;
+    border-radius: 30px;
+    margin-top: 40px;
 }
 
 #contact textarea {
@@ -270,12 +274,13 @@ form input{
 }
 
 footer {
-    background-color: var(--LightPurple);
+    background-color: var(--DeepBlue);
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 30px;
     font-weight:500;
+    color: white;
 }
 
 footer img {

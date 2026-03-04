@@ -20,7 +20,7 @@ function minty(){
     let mintyImg = document.querySelector("#products img");
     mintyImg.src = "MintyFresh_wBackground.jpg";
 
-    document.querySelector("#products p").textContent = "Looking for a cool, minty twist? Meet Minty Fresh, the latest Peak Fuel flavor designed to keep you feeling calm and refreshed. Whether you are tackling yard work under the sun or lifting weights at the gym, this invigorating drink delivers the minerals and nutrients your body craves. Packed with sodium, potassium, chloride, magnesium, and phosphate, it helps maintain steady blood pressure and prevents muscle cramps. Enjoy a drink that is as revitalizing as it is delicious.";
+    document.querySelector("#products p").textContent = "Looking for a cool, minty twist? Meet Minty Fresh, the latest Peak Fuel flavor designed to keep you feeling energized and refreshed. Whether you are tackling yard work under the sun or lifting weights at the gym, this invigorating drink delivers the minerals and nutrients your body craves. Packed with sodium, potassium, chloride, magnesium, and phosphate, it helps maintain steady blood pressure and prevents muscle cramps. Enjoy a drink that is as revitalizing as it is delicious.";
   
     document.querySelector("#products h3").textContent = "Minty Fresh";
 }
