@@ -205,14 +205,6 @@ nav a {
     color: var(--DeepBlue);
 }
 
-#game input {
-    border: solid 1.5px var(--DeepBlue);
-    width: 10%;
-    padding: 10px;
-    border-radius: 30px;
-    background-color: var(--LightBlue);
-}
-
 #game button {
     background-color: var(--DeepBlue);
     color: white;
@@ -221,6 +213,14 @@ nav a {
     padding: 10px 40px 10px 40px;
     border-radius: 30px;
     font-size: 1em;
+}
+
+#num1 {
+    border: none;
+    width: 10%;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: var(--LightBlue);
 }
 
 #contact {

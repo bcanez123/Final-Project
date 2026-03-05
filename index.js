@@ -35,28 +35,55 @@ function lemmon(){
 
 
 //game section
-//random number function
+// Return a random number between min and max (inclusive).
 function getRandomNumber(min, max) {
-    return Math.floor(Math.random() * (max - min + 1)) + min;
+  return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-function guessNumber(){
-//span where the number will display, and one for the message.
-    let dieDisplay1 = document.getElementById("random1");
-    let gameMessage = document.getElementById("gameMsg");
-    //generate one random number between 1 and 5.
-    let die1 = getRandomNumber(1,10);
-    let die2 = getRandomNumber(1,10);
+//validate form
+function validateForm(e){
 
-    //display number to the screen
-    dieDisplay1.innerHTML = die1;
-
-    //if the number matches 5, display the winning message
-    if(die1 === die2){
-        gameMessage.innerHTML = "Congrats! You win!";
-    }else{
-        gameMessage.innerHTML = "You lose. Try again.";
-    }
+ // prevent default form submission
+ e.preventDefault();
+ 
+ // get the input on the page and store it in a variable
+ let num1 = document.getElementById("num1");
+ 
+ // the span where we'll display error messages
+ let errorSpan = num1.previousElementSibling;
+ 
+ // the paragraph where we'll display a message to the user
+ let outputP = document.getElementById("defaultOutput");
+ 
+ // clear out any past error messages and output
+ errorSpan.innerHTML = "";
+ outputP.innerHTML = "";
+ 
+ // if the input is blank, display an error message to the user
+ if(num1.value === ""){
+   errorSpan.innerHTML = "Please enter one digit 1-10";
+ }else{
+   //if the input is not blank, display the message greeting the user
+   outputP.innerHTML = "You selected number " + num1.value +  ".";
+   // clear out the input
+   num1.value = "";
+ }
+ 
+ //display random
+ let display=document.getElementById("random");
+ 
+ let die1 = getRandomNumber(1, 10);
+ 
+ //display those numbers to the screen
+ display.innerHTML = "Random: " + die1;
+ 
+ //see if they match, then display winning message
+ if (num1 === display){
+   gameMsg.innerHTML = "You win!";
+ }else{
+   gameMsg.innerHTML = "You Lose. Try Again.";
+ }
+ 
 }
 
 
@@ -173,7 +200,8 @@ document.getElementById("mintyFresh").addEventListener("click", minty);
 
 document.getElementById("lemmonVibe").addEventListener("click", lemmon);
 
-document.getElementById("guessingGame").addEventListener("click", guessNumber);
+// for our validateForm function and game
+document.getElementById("gamePlay").addEventListener("click", validateForm);
 
 document.getElementById("submit").addEventListener("click", validateOnSubmit);
 
