@@ -78,7 +78,7 @@ function validateForm(e){
  display.innerHTML = "Random: " + die1;
  
  //see if they match, then display winning message
- if (num1 === display){
+ if (num1 === die1){
    gameMsg.innerHTML = "You win!";
  }else{
    gameMsg.innerHTML = "You Lose. Try Again.";
