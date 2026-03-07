@@ -1,7 +1,6 @@
 //strict
 "use strict"
 
-//night mode
 //dark mode
 function darkMode(){
     document.body.classList.toggle("dark");
@@ -79,9 +78,9 @@ function validateForm(e){
  
  //see if they match, then display winning message
  if (num1 === die1){
-   gameMsg.innerHTML = "You win!";
+   gameMsg.innerHTML = "You Win!";
  }else{
-   gameMsg.innerHTML = "You Lose. Try Again.";
+   gameMsg.innerHTML = "You Lose. Try again.";
  }
  
 }

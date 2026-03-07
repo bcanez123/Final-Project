@@ -97,13 +97,24 @@
                 </div>
 
                 <div>
-                    <p>Please select how you prefer to be contacted.</p>
-                    <label id="prefPhone" type="radio">Phone</label>
-                    <input type="radio" name="phone">
+                    <legend>Choose your prefered method of contact: <span class="required">*</span></legend>
+                    <label for="prefPhone" class="radio">
+                      <span class="radio_input">
+                    <input type="radio" name="contact" id="prefPhone" required checked>
+                      <span class="radio_control"></span>
+                     </span>
+                      <span class="radio_input">Prefer Phone</span>
+                  </label>
+                      
 
-                    <label id="prefEmail" type="radio">Email</label>
-                    <input type="radio" name="prefEmail">
-                    <span id="prefer"></span>
+                    <label for="prefEmail" class="radio">
+                      <span class="radio_input">
+                        <input type="radio" name="contact" id="prefEmail" required>
+                        <span class="radio_control"></span>
+                      </span>
+                      <span class="radio_label">Prefer Email</span>
+                  </label>
+                  </fieldset><span id="prefContact"></span>
                 </div>
             
                 <div>

@@ -55,6 +55,7 @@ table {
     --Orange: #ffab34;
     --LightBlue: #cae6f6;
     --DeepBlue: #3957d3;
+    --SoftGraphite: #3f3f3f;
 }
 
 /* global styles */
@@ -83,7 +84,7 @@ p {
 
 /* regular styles */
 .dark {
-    background-color: var(--DeepBlue);
+    background-color: var(--SoftGraphite);
   }
 
   .dark p {
