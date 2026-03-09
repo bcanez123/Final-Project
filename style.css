@@ -67,24 +67,24 @@ h1 {
 h2 {
     font-size: 40px;
     font-weight: bold;
-    color: var(--DeepBlue);
+    color: var(--SoftGraphite);
     padding-bottom: 30px;
 }
 
 h3 {
     font-size: 25px;
-    color: var(--DeepBlue);
+    color: var(--SoftGraphite);
     padding-bottom: 20px;
 }
 
 p {
-    color: var(--DeepBlue);
+    color: var(--SoftGraphite);
     line-height: normal;
 }
 
 /* regular styles */
 .dark {
-    background-color: var(--DeepBlue);
+    background-color: var(--SoftGraphite);
   }
 
   .dark p {
@@ -127,7 +127,7 @@ nav ul {
 nav a {
     text-decoration: none;
     padding: 30px;
-    color: var(--DeepBlue);
+    color: var(--SoftGraphite);
 }
 
 #hero {
@@ -149,7 +149,9 @@ nav a {
 }
 
 #about {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
     margin: 50px;
     margin-top: 70px;
 }
@@ -173,7 +175,7 @@ nav a {
 
 
 #products button {
-    background-color: var(--DeepBlue);
+    background-color: var(--SoftGraphite);
     color: white;
     font-family: "Poppins";
     padding: 10px 60px 10px 60px;
@@ -203,11 +205,11 @@ nav a {
 }
 
 #game label {
-    color: var(--DeepBlue);
+    color: var(--SoftGraphite);
 }
 
 #game button {
-    background-color: var(--DeepBlue);
+    background-color: var(--SoftGraphite);
     color: white;
     font-family: "Poppins";
     border: none;
@@ -225,7 +227,7 @@ nav a {
 }
 
 #contact {
-    color: var(--DeepBlue);
+    color: var(--SoftGraphite);
     background-color: var(--LightPurple);
     padding-right: 100px;
     padding-left: 50px;
@@ -238,32 +240,32 @@ nav a {
     border: none;
     border-radius: 10px;
     padding: 10px;
-    width: 50%;
+    width: 100%;
     display: block;
 }
 
 
 
 #contact button{
-    background-color: var(--DeepBlue);
+    background-color: var(--SoftGraphite);
     border-radius: 30px;
     color: white;
     padding: 10px;
     font-family: "Poppins";
-    font-size: 17px;
+    font-size: 1.1rem;
     border: none;
     margin: 10px;
     display: block;
-    width: 50%;
+    width: 100%;
 }
 
-form input{
+#contact input{
     border: none;
     border-radius: 10px;
     background-color: var(--LightBlue);
     display: block;
     padding: 10px;
-    width: 50%;
+    width: 100%;
 }
 
 .message{
@@ -291,14 +293,34 @@ form input{
     border: 1px solid var(--orange);
 }
 
+
+
 .container {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
     gap: 35px;
+    border-radius: 30px;
+}
+
+label{
+    display: inline-block;
+    margin: 01em 0 0 0;
+    font-size: 1.1rem;
+    padding-bottom: 0.5em;
+  }
+  
+
+.form_container {
+    background-color: aliceblue;
+    padding-left: 40px;
+    padding-right: 55px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    border-radius: 30px;
 }
 
 footer {
-    background-color: var(--DeepBlue);
+    background-color: var(--SoftGraphite);
     display: flex;
     justify-content: center;
     align-items: center;
