@@ -324,6 +324,10 @@ label{
     gap: 10px;
   }
 
+#contact img {
+    width: 110%;
+}
+
 footer {
     background-color: var(--SoftGraphite);
     display: flex;

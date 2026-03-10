@@ -28,7 +28,7 @@ function lemmon(){
     let lemmonImg = document.querySelector("#products img");
     lemmonImg.src = "LemonVibe_wBackground.jpg";
 
-    document.querySelector("#products p").textContent = "Energize every workout with our refreshing Lemmon Vibe Peak Fuel drink. From seasoned athletes to boxing enthusiasts, everyone needs electrolytes to perform at their best. Savor the bold, tangy-sweet taste of Lemon Vible, bursting with essential nutrients and minerals like sodium, potassium, chloride, magnesium, and phosphate. These powerhouses help keep your blood pressure steady and your muscles cramp-free. Enjoy a drink that is as delicious as it is nourishing.";
+    document.querySelector("#products p").textContent = "Energize every workout with our refreshing Lemmon Vibe Peak Fuel drink. From seasoned athletes to boxing enthusiasts, everyone needs electrolytes to perform at their best. Savor the bold, tangy-sweet taste of Lemon Vibe, bursting with essential nutrients and minerals like sodium, potassium, chloride, magnesium, and phosphate. These powerhouses help keep your blood pressure steady and your muscles cramp-free. Enjoy a drink that is as delicious as it is nourishing.";
     document.querySelector("#products h3").textContent = "Lemmon Vibe";
 }
 
