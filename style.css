@@ -319,6 +319,11 @@ label{
     border-radius: 30px;
 }
 
+.radio {
+    width: 50%;
+    display: block;
+  }
+
 footer {
     background-color: var(--SoftGraphite);
     display: flex;

@@ -107,6 +107,18 @@ function displayPrefer(){
 }
 
 //contact section
+
+//global variables
+let contactIsValid = false;
+
+// the two radios
+let preferPhone = document.getElementById("prefPhone");
+let preferEmail = document.getElementById("prefEmail");
+
+// the span where we need to display the contact
+let contactSpan = document.getElementById("prefContact");
+
+//function for validating the form
 function validateOnSubmit(e){
     // prevent default form submission
     e.preventDefault();
@@ -190,6 +202,19 @@ function validateOnSubmit(e){
     }
   }
 
+  //radio buttons function
+function displayContact(){
+  // determine which radio is selected and display the correct contact in the span based on that choice.
+  if(preferPhone.checked){
+		contactSpan.textContent = "You have chosen to be contacted by phone";
+		contactIsValid = preferPhone.checked;
+}
+  if(preferEmail.checked){
+		contactSpan.textContent = "You have chosen to be contacted by email";
+		contactIsValid = preferEmail.checked;
+  }
+}
+
 //event listeners
 document.getElementById("nightMode").addEventListener("click",darkMode);
 
@@ -204,9 +229,8 @@ document.getElementById("gamePlay").addEventListener("click", validateForm);
 
 document.getElementById("submit").addEventListener("click", validateOnSubmit);
 
-//event listeners for radio buttons
-
-let preferRadios = document.querySelectorAll("input[type=\"radio\"]");
-for (let radio of preferRadios){
-	radio.addEventListener("change", displayPrefer);
+// radio buttons
+let contactRadios = document.querySelectorAll("input[type=\"radio\"]");
+for (let radio of contactRadios){
+	radio.addEventListener("change", displayContact);
 }
