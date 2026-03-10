@@ -320,8 +320,8 @@ label{
 }
 
 .radio {
-    width: 50%;
-    display: block;
+    display: flex;
+    gap: 10px;
   }
 
 footer {
