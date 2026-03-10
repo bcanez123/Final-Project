@@ -103,6 +103,9 @@ p {
     color: white;
   }
 
+  .dark #game span{
+    color: white;
+  }
 
 #nightMode {
     border-radius: 50%;
@@ -205,6 +208,10 @@ nav a {
 }
 
 #game label {
+    color: var(--SoftGraphite);
+}
+
+#game span {
     color: var(--SoftGraphite);
 }
 
